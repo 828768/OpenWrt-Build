@@ -13,10 +13,11 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 sed -i "/helloworld/d" "feeds.conf.default"
+sed -i "/openwrt-passwall/d" "feeds.conf.default"
 
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 cat >>feeds.conf.default <<EOF
-src-git helloworld https://github.com/fw876/helloworld.git
+src-git passwall https://github.com/xiaorouji/openwrt-passwall
 EOF
